@@ -52,6 +52,10 @@ table {
 }
 /*STYLES*/
 
+.container {
+  border: solid 2px red;
+}
+
 header{
   width: 100%;
   position:relative;
@@ -122,6 +126,7 @@ nav ul{
 }
 nav ul a{
   text-decoration: none;
+  width: 100%;
 }
 
 nav ul li {
@@ -157,8 +162,6 @@ nav ul li:hover {
   color: var(--accent);
   cursor:pointer;
 }
-
-
 
 h1 {
   font-family: 'Gugi', serif;
@@ -203,6 +206,7 @@ h3,p {
 
 section {
   margin: 0 1em;
+  box-shadow: -0px -10px 10px var(--dark-accent); 
 }
 
 section h2 {
@@ -225,6 +229,29 @@ section p {
   cursor:pointer;
   transition:all .2s;
   transform: rotate(0deg);
+}
+
+.animation-element.slide-left{
+  opacity: 0;
+  transition: all 1s linear;
+  transform: translate3d(-100px, 0px, 0px);
+}
+.animation-element.slide-right{
+  opacity: 0;
+  transition: all 1s linear;
+  transform: translate3d(100px, 0px, 0px);
+}
+
+.animation-element.slide-right.in-view{
+  opacity: 1;
+  transition: all 1s linear;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.animation-element.slide-left.in-view{
+  opacity: 1;
+  transition: all 1s linear;
+  transform: translate3d(0px,0px,0px);
 }
 
 @media screen and (min-width: 400px) {
