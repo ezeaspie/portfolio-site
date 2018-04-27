@@ -9,7 +9,6 @@ $(document).on('click', '.pageup', function (event) {
 $(document).on('mouseover', '.pageup', function (event) {
     event.preventDefault();
     $(this).addClass("animate");
-    console.log(this);
 });
 
 $(document).on('mouseleave', '.pageup', function (event) {
@@ -54,3 +53,43 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
+
+//Project Carousel
+
+const projectList = [];
+
+const projectFactory = (name,desc,imageUrl,url,toolsArray) => {
+    return {name, desc, imageUrl, url, toolsArray};
+}
+
+const generateProjectSection = (config, id) => {
+    let html = `
+            <div class="project-main" id="project${id}">
+                <div class="project-overlay"></div>
+                <img class="project-image" src=${config.imageUrl}>
+                <a href="${config.imageUrl}">
+                    <h3 class="projectTitle">${config.name}</h3>
+                    <h4 class="projectDesc">${config.desc}</h4>
+                </a>
+            </div>
+    `
+
+    return html;
+}
+
+projectList.push(projectFactory("BattleShip", "2 player turn-based battleship game built using Vanilla JavaScript", "./media/battleship.jpg", "https://ezeaspie.github.io/battleship-game/", ["HTML","JavaScript", "CSS"]));
+projectList.push(projectFactory("Budget Manager", "A small app that tracks and stores income, expense, and surplus finance data.", "./media/budget.jpg", "https://ezeaspie.github.io/budget-app/", ["HTML", "JavaScript", "CSS", "LocalStorage"]));
+projectList.push(projectFactory("To-Do List", "Manage collections of tasks. Add, delete, and give priority to tasks in a neat organized module.", "./media/todo.jpg","https://ezeaspie.github.io/todo-app/", ["HTML", "JavaScript", "CSS"]));
+projectList.push(projectFactory("GoldMine", "An app that scrapes data", "https://tse2.mm.bing.net/th?id=OIP.3AhZiFU0JferYnuynTGhBwHaFj&pid=Api", "https://tse2.mm.bing.net/th?id=OIP.3AhZiFU0JferYnuynTGhBwHaFj&pid=Api", ["Node", "HTML", "JS", "React"]));
+
+
+let carouselHTML = '';
+
+let baseHTML = `<div class="carousel">`
+for (let i = 0; i < projectList.length; i++) {
+    baseHTML += generateProjectSection(projectList[i], i);
+}
+
+baseHTML += "</div>";
+
+$("#projects").append(baseHTML);
