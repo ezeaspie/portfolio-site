@@ -308,20 +308,22 @@ section p {
   height:100%;
   width:100%;
   background: #000;
-  opacity: 0;
+  opacity: .2;
   z-index: -98;
   transition: ease-in-out 1s all;
-  border-radius:10px;
+  border-radius:5px;
 }
 .project-main:hover .project-overlay {
   transition: ease-in-out 1s all;
-  opacity: .3;
+  opacity: .5;
 }
 
 .projectDesc {
   opacity: 0;
   transition:ease 1s all;
   color:var(--light-accent);
+  font-family: 'Open Sans';
+  margin-top: 1em; 
 }
 
 .project-main:hover .projectDesc {
@@ -330,7 +332,9 @@ section p {
 }
 
 .projectTitle {
-  text-shadow: 2px 2px #164d5e;
+  text-shadow: 0px 0px 5px #000;
+  width:90%;
+  font-family: 'Gugi';
 }
 
 .light{
