@@ -76,9 +76,9 @@ const generateProjectSection = (config, id) => {
     return html;
 }
 
-projectList.push(projectFactory("BattleShip", "2 player turn-based battleship game built using Vanilla JavaScript", "./media/battleship.jpg", "https://ezeaspie.github.io/battleship-game/", ["HTML","JavaScript", "CSS"]));
-projectList.push(projectFactory("Budget Manager", "A small app that tracks and stores income, expense, and surplus finance data.", "./media/budget.jpg", "https://ezeaspie.github.io/budget-app/", ["HTML", "JavaScript", "CSS", "LocalStorage"]));
-projectList.push(projectFactory("To-Do List", "Manage collections of tasks. Add, delete, and give priority to tasks in a neat organized module.", "./media/todo.jpg","https://ezeaspie.github.io/todo-app/", ["HTML", "JavaScript", "CSS"]));
+projectList.push(projectFactory("BattleShip", "2 player turn-based battleship game built using Vanilla JavaScript", "./media/battleship.JPG", "https://ezeaspie.github.io/battleship-game/", ["HTML","JavaScript", "CSS"]));
+projectList.push(projectFactory("Budget Manager", "A small app that tracks and stores income, expense, and surplus finance data.", "./media/budget.JPG", "https://ezeaspie.github.io/budget-app/", ["HTML", "JavaScript", "CSS", "LocalStorage"]));
+projectList.push(projectFactory("To-Do List", "Manage collections of tasks. Add, delete, and give priority to tasks in a neat organized module.", "./media/todo.JPG","https://ezeaspie.github.io/todo-app/", ["HTML", "JavaScript", "CSS"]));
 projectList.push(projectFactory("Aquarium Hub", "A fully responsive homepage mockup for a site centered around aquarium keeping.", "./media/aquarium.png", "https://ezeaspie.github.io/aquarium-site/", ["HTML", "JS", "Responsive Design", "CSS"]));
 
 
